@@ -1,6 +1,13 @@
 {
     "cSpell.words": [
         "Bookly",
-        "presentaion"
-    ]
+        "cupertino",
+        "Kprimary",
+        "presentaion",
+        "Schyler"
+    ],
+    "flutterTools.displayGetxContextMenu": true,
+    "flutterTools.displayMobxContextMenu": false,
+    "flutterTools.displayRiverpodContextMenu": false,
+    "flutterTools.displayModularContextMenu": false
 }
