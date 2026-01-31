@@ -4,7 +4,8 @@
         "cupertino",
         "Kprimary",
         "presentaion",
-        "Schyler"
+        "Schyler",
+        "Slidingtextanimation"
     ],
     "flutterTools.displayGetxContextMenu": true,
     "flutterTools.displayMobxContextMenu": false,
