@@ -1,8 +1,11 @@
 
+// ignore_for_file: file_names
+
 import 'package:flutter/widgets.dart';
 
-class Slidingtextanimation extends StatelessWidget {
-  const Slidingtextanimation({
+// ignore: camel_case_types
+class slidingtextanimation extends StatelessWidget {
+  const slidingtextanimation({
     super.key,
     required this.slidingAnimation,
   });
