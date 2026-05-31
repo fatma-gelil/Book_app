@@ -1,8 +1,10 @@
 import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/core/utils/app_routers.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/features/home/presentaion/views/home_view.dart';
 import 'package:bookly_app/features/splash/presentaion/views/widgets/slidingTextAnimation.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -63,22 +65,28 @@ class _SplashViewBodyState extends State<SplashViewBody>
 //     );
 //   });
 // }
+// void navigateToHome(BuildContext context) {
+//   Future.delayed(const Duration(seconds: 2), () {
+//     Navigator.push(
+//       // ignore: use_build_context_synchronously
+//       context,
+//       PageRouteBuilder(
+//         transitionDuration: kTransitionDuration,
+//         pageBuilder: (context, animation, secondaryAnimation) =>
+//             const HomeView(),
+//         transitionsBuilder: (context, animation, secondaryAnimation, child) {
+//           return FadeTransition(
+//             opacity: animation,
+//             child: child,
+//           );
+//         },
+//       ),
+//     );
+//   });
+// }
 void navigateToHome(BuildContext context) {
   Future.delayed(const Duration(seconds: 2), () {
-    Navigator.push(
-      // ignore: use_build_context_synchronously
-      context,
-      PageRouteBuilder(
-        transitionDuration: kTransitionDuration,
-        pageBuilder: (context, animation, secondaryAnimation) =>
-            const HomeView(),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          return FadeTransition(
-            opacity: animation,
-            child: child,
-          );
-        },
-      ),
-    );
+    // ignore: use_build_context_synchronously
+    context.go(AppRouters.kHomeView);
   });
 }
