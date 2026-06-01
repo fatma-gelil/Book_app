@@ -1,4 +1,5 @@
 import 'package:bookly_app/core/utils/assets.dart';
+import 'package:bookly_app/features/home/presentaion/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -56,25 +57,13 @@ class BestSellerListViewItem extends StatelessWidget {
                   children: [
                     Text(
                       "19.99 €",
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(width: 70),
-                    Icon(Icons.star, color: Colors.yellow),
-                    SizedBox(width: 3),
-                    Text(
-                      "4.8",
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(width: 5),
-      
-                    Text(
-                      "(2390)",
                       style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.grey,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                    SizedBox(width: 70),
+                    BookRating(),
                   ],
                 ),
               ],
