@@ -17,8 +17,23 @@ class BookDetailsViewBody extends StatelessWidget {
         children: [
           const CustomBookDetailsAppBar(),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.17),
+            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
             child: const CustomBookImage(),
+          ),
+          const SizedBox(height: 43),
+          Text(
+            'book title',
+            style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            'book subtitle',
+            style: TextStyle(
+              fontSize: 18,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey[500],
+            ),
           ),
         ],
       ),

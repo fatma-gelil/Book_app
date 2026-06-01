@@ -15,6 +15,7 @@ class BooksListView extends StatelessWidget {
             padding: EdgeInsets.only(left: 24),
             child: CustomBookImage(),
           );
+          
         },
       ),
     );
