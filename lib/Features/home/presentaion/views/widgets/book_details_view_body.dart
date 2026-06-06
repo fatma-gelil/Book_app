@@ -11,47 +11,52 @@ class BookDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: Column(
-        children: [
-          const CustomBookDetailsAppBar(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-            child: const CustomBookImage(),
-          ),
-          const SizedBox(height: 43),
-          Text(
-            'book title',
-            style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 6),
-          Text(
-            'book subtitle',
-            style: TextStyle(
-              fontSize: 18,
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.w500,
-              color: Colors.grey[500],
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: Column(
+              children: [
+                const CustomBookDetailsAppBar(),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+                  child: const CustomBookImage(),
+                ),
+                const SizedBox(height: 43),
+                Text(
+                  'book title',
+                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 6),
+                Text(
+                  'book subtitle',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.grey[500],
+                  ),
+                ),
+                SizedBox(height: 18),
+                const BookRating(),
+                SizedBox(height: 20),
+                BookAction(),
+                const Expanded(child: SizedBox(height: 30)),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'you may also like it',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                const SimilarBooksListView(),
+              ],
             ),
           ),
-          SizedBox(height: 18),
-          const BookRating(),
-          SizedBox(height: 20),
-          BookAction(),
-          const SizedBox(height: 30),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'you may also like it',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-          ),
-          const SizedBox(height: 16),
-          const SimilarBooksListView(),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
-
